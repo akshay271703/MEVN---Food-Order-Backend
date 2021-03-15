@@ -15,6 +15,14 @@ app.use(bodyParser.urlencoded({ extended : true}))
 app.use(bodyParser.json())
 app.use(cors())
 
+// Router and Controllers
+const authRoutes    = require('./routes/authRoutes.js')
+const homeRoutes    = require('./routes/homeRoutes.js')
+const productRoutes = require('./routes/productRoute.js')
+app.use(authRoutes)
+app.use(homeRoutes)
+app.use(productRoutes)
+
 // Database Connection
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser : true,
