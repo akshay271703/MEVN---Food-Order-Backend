@@ -32,4 +32,13 @@ Signup - Returns ID and email of newly created User
 ```
 # Models
 ### User
+```
+{ email : String , password : bcrypt hashed string }
+```
 ### Products
+```
+{ id, name, quantity, imageUrl, price}
+```
+
+# Views
+### Handles by VUE 3 and cors
