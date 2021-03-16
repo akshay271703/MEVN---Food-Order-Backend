@@ -28,7 +28,6 @@ module.exports.product_buy = async(req,res)=>{
     const {quantity} = req.body
     try{
         const oldProduct = await Product.findById(id)
-        console.log(oldProduct)
         oldProduct.quantity = oldProduct.quantity - quantity
         await oldProduct.save()
     }catch(err){
